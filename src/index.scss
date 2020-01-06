@@ -1,0 +1,204 @@
+body{
+    margin:0;
+    padding:0;
+    background-color: #21252b;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Myriad Pro";
+}
+
+.main{
+    height: 800px;
+    width: 384px;
+    border: 5px solid white;
+    border-radius: 45px;
+    margin-top: 50px;
+    display: flex;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover; 
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus{
+    background-color: transparent!important;
+    -webkit-text-fill-color: #ffffff;
+    transition: background-color 5000s ease-in-out 0s;
+}
+input:focus{
+    outline:none;
+}
+button:focus{
+    outline: none;
+}
+
+
+.nav{
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    .changeUnitsWrapper{
+        margin-top: 20px;
+        button{
+            background: none;
+            border: none;
+            color:rgba(198, 198, 198, 0.8);
+            font-size: 18px;
+            padding:10px;
+            border: 1px solid rgba(198, 198, 198, 0.5);
+        }
+    }
+    form{
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        button{
+            background: none;
+            border: none;
+            color:rgba(198, 198, 198, 0.8);
+            font-size: 18px;
+            padding:10px;
+            padding-right: 25px;
+            margin-top: 10px;
+        }
+        .formWrap{
+            display: inline-block;
+            width: 75%;
+            top: 10px;
+            position: relative;
+            margin-top: 15px;
+            margin-bottom: 25px;
+            .form-line{
+                position: absolute;
+                color: rgba(198, 198, 198, 0.8);
+                width: 100%;
+                height: 1px;
+                background-color: rgba(198, 198, 198, 0.8);
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                transition: -webkit-transform 150ms ease-out;
+                transition: transform 150ms ease-out;
+                transition: transform 150ms ease-out, -webkit-transform 150ms ease-out;
+            }
+            .form-line.focused{
+                -webkit-transform: translateY(13px);
+                transform: translateY(13px);
+            }
+            .form-line.filled{
+                -webkit-transform: translateY(13px);
+                transform: translateY(13px);
+            }
+            .text-wrap{
+                position: relative;
+                input{
+                    width:100%;
+                    color: rgba(198, 198, 198, 0.8);
+                    border: none;
+                    background-color: transparent;
+                    font-size: 26px;
+                }
+            }
+        }
+    }
+   
+
+}
+.insideWrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .top{
+        margin-bottom: 20px;
+        margin-left: 40px;
+        margin-right: 40px;
+        .location{
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 26px;
+
+        }
+        .tempDate{
+            display: flex;
+            flex-direction: row;
+            .temp{
+                color: #ffffff;
+                font-size: 146px;
+                font-weight: 300;
+            }
+            .dateTime{
+                color: rgba(255, 255, 255, 0.8);
+                font-size: 26px;
+                align-items: flex-end;
+                display:flex;
+                .time{
+                    margin-bottom: 40px;
+                }
+            }
+        }
+        .feels{
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 12px;
+        }
+    }
+    .center{
+        margin-bottom: 20px;
+        margin-left: 40px;
+        margin-right: 40px;
+        .info{
+            height: 55px;
+            width: 100%;
+            margin-bottom: 25px;
+            display:flex;
+            flex-direction: row;
+            
+            .pressure{
+                flex:1;
+            }
+            .humidity{
+                flex:1;
+            }
+            .cloudiness{
+                flex:1;
+            }
+            .infoTopText{
+                text-align: center;
+                color: rgba(255, 255, 255, 0.7);
+                margin-bottom: 10px;
+            }
+            .infoBotText{
+                text-align: center;
+                color: rgba(255, 255, 255, 1);
+                font-weight: bold;
+            }
+        }
+        .windWrap{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            .windTitle{
+                color: rgba(255, 255, 255, 1);
+                font-weight: bold;
+                margin-right: 30px;
+            }
+            .windData{
+                color: rgba(255, 255, 255, 0.7);
+            }
+        }
+    }
+    .bottom{
+        margin-bottom: 55px;
+        margin-left: 40px;
+        margin-right: 40px;
+        .condition{
+            color: rgba(198, 198, 198, 0.8);
+            font-size: 16px;
+        }
+    }
+}

@@ -1,13 +1,204 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  background-color: #21252b;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Myriad Pro";
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.main {
+  height: 800px;
+  width: 384px;
+  border: 5px solid white;
+  border-radius: 45px;
+  margin-top: 50px;
+  display: flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  background-color: transparent !important;
+  -webkit-text-fill-color: #ffffff;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+input:focus {
+  outline: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+.nav {
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.nav .changeUnitsWrapper {
+  margin-top: 20px;
+}
+.nav .changeUnitsWrapper button {
+  background: none;
+  border: none;
+  color: rgba(198, 198, 198, 0.8);
+  font-size: 18px;
+  padding: 10px;
+  border: 1px solid rgba(198, 198, 198, 0.5);
+}
+.nav form {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+}
+.nav form button {
+  background: none;
+  border: none;
+  color: rgba(198, 198, 198, 0.8);
+  font-size: 18px;
+  padding: 10px;
+  padding-right: 25px;
+  margin-top: 10px;
+}
+.nav form .formWrap {
+  display: inline-block;
+  width: 75%;
+  top: 10px;
+  position: relative;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+.nav form .formWrap .form-line {
+  position: absolute;
+  color: rgba(198, 198, 198, 0.8);
+  width: 100%;
+  height: 1px;
+  background-color: rgba(198, 198, 198, 0.8);
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transition: -webkit-transform 150ms ease-out;
+  transition: transform 150ms ease-out;
+  transition: transform 150ms ease-out, -webkit-transform 150ms ease-out;
+}
+.nav form .formWrap .form-line.focused {
+  -webkit-transform: translateY(13px);
+  transform: translateY(13px);
+}
+.nav form .formWrap .form-line.filled {
+  -webkit-transform: translateY(13px);
+  transform: translateY(13px);
+}
+.nav form .formWrap .text-wrap {
+  position: relative;
+}
+.nav form .formWrap .text-wrap input {
+  width: 100%;
+  color: rgba(198, 198, 198, 0.8);
+  border: none;
+  background-color: transparent;
+  font-size: 26px;
+}
+
+.insideWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.insideWrapper .top {
+  margin-bottom: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.insideWrapper .top .location {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 26px;
+}
+.insideWrapper .top .tempDate {
+  display: flex;
+  flex-direction: row;
+}
+.insideWrapper .top .tempDate .temp {
+  color: #ffffff;
+  font-size: 146px;
+  font-weight: 300;
+}
+.insideWrapper .top .tempDate .dateTime {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 26px;
+  align-items: flex-end;
+  display: flex;
+}
+.insideWrapper .top .tempDate .dateTime .time {
+  margin-bottom: 40px;
+}
+.insideWrapper .top .feels {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+}
+.insideWrapper .center {
+  margin-bottom: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.insideWrapper .center .info {
+  height: 55px;
+  width: 100%;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: row;
+}
+.insideWrapper .center .info .pressure {
+  flex: 1;
+}
+.insideWrapper .center .info .humidity {
+  flex: 1;
+}
+.insideWrapper .center .info .cloudiness {
+  flex: 1;
+}
+.insideWrapper .center .info .infoTopText {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 10px;
+}
+.insideWrapper .center .info .infoBotText {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+.insideWrapper .center .windWrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.insideWrapper .center .windWrap .windTitle {
+  color: white;
+  font-weight: bold;
+  margin-right: 30px;
+}
+.insideWrapper .center .windWrap .windData {
+  color: rgba(255, 255, 255, 0.7);
+}
+.insideWrapper .bottom {
+  margin-bottom: 55px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.insideWrapper .bottom .condition {
+  color: rgba(198, 198, 198, 0.8);
+  font-size: 16px;
+}
+
+/*# sourceMappingURL=index.css.map */
