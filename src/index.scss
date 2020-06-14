@@ -1,3 +1,15 @@
+@mixin for-size($size) {
+    @if $size == 320 {
+      @media (max-width: 320px) { @content; }
+    } @else if $size == 375 {
+      @media (max-width: 375px) { @content; }
+    } @else if $size == 425 {
+      @media (max-width: 425px) { @content; }
+    } @else if $size == 1400 {
+      @media screen and (max-width: 1400px){ @content; }
+    }
+  }
+
 body{
     margin:0;
     padding:0;
@@ -21,6 +33,18 @@ body{
     background-size: cover; 
     flex-direction: column;
     justify-content: space-between;
+    @include for-size(425) {  
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        border: none;
+        border-radius: 0;
+    }
+    @include for-size(375) {  
+    }
+    @include for-size(320) {  
+
+    }
 }
 
 input:-webkit-autofill,
@@ -43,8 +67,25 @@ button:focus{
     display: flex;
     flex-direction: row;
     width: 100%;
+    @include for-size(425) {  
+        padding: 0;
+    }
+    @include for-size(375) {  
+    }
+    @include for-size(320) {  
+
+    }
+
     .changeUnitsWrapper{
         margin-top: 20px;
+        @include for-size(425) {  
+            padding-top: 15px;
+        }
+        @include for-size(375) {  
+        }
+        @include for-size(320) {  
+    
+        }
         button{
             background: none;
             border: none;
@@ -58,6 +99,15 @@ button:focus{
         width: 80%;
         display: flex;
         flex-direction: row;
+        @include for-size(425) {  
+            padding-top: 15px;
+            padding-left: 15px;
+        }
+        @include for-size(375) {  
+        }
+        @include for-size(320) {  
+    
+        }
         button{
             background: none;
             border: none;
@@ -128,9 +178,18 @@ button:focus{
             flex-direction: row;
             .temp{
                 color: #ffffff;
-                font-size: 146px;
+                font-size: 116px;
                 font-weight: 300;
+                @include for-size(425) {  
+                }
+                @include for-size(375) {  
+                    font-size: 96px;
+                }
+                @include for-size(320) {  
+            
+                }
             }
+
             .dateTime{
                 color: rgba(255, 255, 255, 0.8);
                 font-size: 26px;
@@ -199,6 +258,7 @@ button:focus{
         .condition{
             color: rgba(198, 198, 198, 0.8);
             font-size: 16px;
+            text-align: center;
         }
     }
 }

@@ -22,7 +22,15 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-
+@media (max-width: 425px) {
+  .main {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+  }
+}
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {
@@ -45,8 +53,18 @@ button:focus {
   flex-direction: row;
   width: 100%;
 }
+@media (max-width: 425px) {
+  .nav {
+    padding: 0;
+  }
+}
 .nav .changeUnitsWrapper {
   margin-top: 20px;
+}
+@media (max-width: 425px) {
+  .nav .changeUnitsWrapper {
+    padding-top: 15px;
+  }
 }
 .nav .changeUnitsWrapper button {
   background: none;
@@ -60,6 +78,12 @@ button:focus {
   width: 80%;
   display: flex;
   flex-direction: row;
+}
+@media (max-width: 425px) {
+  .nav form {
+    padding-top: 15px;
+    padding-left: 15px;
+  }
 }
 .nav form button {
   background: none;
@@ -130,8 +154,13 @@ button:focus {
 }
 .insideWrapper .top .tempDate .temp {
   color: #ffffff;
-  font-size: 146px;
+  font-size: 116px;
   font-weight: 300;
+}
+@media (max-width: 375px) {
+  .insideWrapper .top .tempDate .temp {
+    font-size: 96px;
+  }
 }
 .insideWrapper .top .tempDate .dateTime {
   color: rgba(255, 255, 255, 0.8);
@@ -199,6 +228,7 @@ button:focus {
 .insideWrapper .bottom .condition {
   color: rgba(198, 198, 198, 0.8);
   font-size: 16px;
+  text-align: center;
 }
 
 /*# sourceMappingURL=index.css.map */
