@@ -5,4 +5,5 @@ Todo: autocomplete on search
 demo:
 https://weather-app-farel.netlify.app/
 
-https://github.com/Farelion/weather_app/blob/master/preview-img/weather-app.png?raw=true
+
+https://raw.githubusercontent.com/Farelion/weather_app/master/preview-img/weather-app.png
